@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colorful Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      overflow: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      color: white;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      background: white;
+      color: #333;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      background: #222;
+      color: white;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.4;
+      animation: float 8s infinite ease-in-out;
+    }
+
+    .circle1 {
+      width: 120px;
+      height: 120px;
+      background: #ff9ff3;
+      top: 10%;
+      left: 10%;
+    }
+
+    .circle2 {
+      width: 180px;
+      height: 180px;
+      background: #54a0ff;
+      bottom: 10%;
+      right: 10%;
+    }
+
+    .circle3 {
+      width: 100px;
+      height: 100px;
+      background: #5f27cd;
+      top: 70%;
+      left: 20%;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+  <div class="circle circle3"></div>
+
+  <div class="container">
+    <h1>Welcome 🎨</h1>
+    <p>
+      This is a colorful animated HTML page with gradients, floating shapes,
+      and modern glassmorphism effects.
+    </p>
+    <button class="btn">Explore More</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+psql -U postgres -p 5432 -h localhost
+
+
+
+
+docker run -d \
+  --name postgres14-container \
+  -p 5432:5432 \
+  postgres14-local
+  
+  
+  // this means i want to run container with proeper name with this image which i have build 
